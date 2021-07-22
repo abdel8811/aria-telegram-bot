@@ -1,0 +1,15 @@
+#!/bin/sh
+active=`./ctx/aria_active`
+waiting=`./ctx/aria_waiting`
+stopped=`./ctx/aria_stopped`
+dspeed=`./ctx/dspeed`
+stats=$(cat <<-END
+Aria2 Stats :
+ ${active} 
+ ${waiting} 
+ ${stopped} 
+ Download Speed : ${dspeed} kb 
+END
+)
+echo "${stats}"
+

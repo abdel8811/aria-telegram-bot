@@ -1,0 +1,6 @@
+config telegramopenwrt 'global'
+	option key 'API Token'
+	option url 'https://api.telegram.org/bot'
+	option my_chat_id 'CHAT-ID'
+
+

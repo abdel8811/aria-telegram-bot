@@ -1,0 +1,5 @@
+#!/bin/sh
+dspeed=$(curl http://127.0.0.1:6800/jsonrpc -H "Content-Type: application/json" -H "Accept: application/json" --data '{"jsonrpc": "2.0","id":"foo", "method": "aria2.getGlobalStat", "params":[]}' | cut -d "{" -f 3 | cut -d "," -f 1 | cut -d ":" -f 2 |tr -d '"')
+dspeedkb=$(printf '%.0f ' "$((dspeed / 1024))")
+
+echo $dspeedkb

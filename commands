@@ -1,0 +1,33 @@
+cd /tmp/telegramopenwrt
+chmod 777 etc/config/*
+chmod 777 etc/init.d/*
+chmod 777 sbin/*
+chmod 777 usr/lib/telegramopenwrt/plugins/*
+chmod 777 usr/lib/telegramopenwrt/plugins/actions/*
+chmod 777 usr/lib/telegramopenwrt/plugins/ctx/*
+cp -r etc /
+cp -r sbin / 
+cp -r usr /
+/etc/init.d/telegram_bot start 
+/etc/init.d/telegram_bot enable
+/etc/init.d/hosts_scan start
+/etc/init.d/hosts_scan enable
+
+================================================================================================================================
+
+opkg update && opkg install curl ca-certificates aria2 webui-aria
+
+
+================================================================================================================================
+
+aria script
+
+aria2c --enable-rpc --rpc-listen-all --allow-overwrite=true --auto-file-renaming=false --continue=true --dir=/mnt/sda1/download --max-connection-per-server=4 --max-concurrent-downloads=1 --max-resume-failure-tries=10 --file-allocation=none --daemon
+exit 0
+
+=================================================================================================================================
+bots
+
+@BotFather
+@GiveChatId_Bot
+

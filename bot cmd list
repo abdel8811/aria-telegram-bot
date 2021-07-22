@@ -1,0 +1,13 @@
+add - Add new download s
+pause - Pause all aria Downloads
+resume - Resume all aria Downloads
+stats - Show aria global stat
+fw_enable - Enable a firewall rule.
+fw_list - List all fw rules.
+fw_unblock - Remove a hostname from a deny firewall rule, if hostname is empty, will remove all rules created by this bot.
+get_ping - Ping a address or host, return Up or Down.
+get_uptime - Return the uptime from this Device.
+hst_list - Get hosts in the dhcp Leases. If a hostname is present, search only for this hostname.
+reboot - Reboot the router.
+start - This menu help!
+

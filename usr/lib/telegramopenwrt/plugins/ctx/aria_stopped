@@ -1,0 +1,4 @@
+#!/bin/sh
+
+stopped=$(curl http://127.0.0.1:6800/jsonrpc -H "Content-Type: application/json" -H "Accept: application/json" --data '{"jsonrpc": "2.0","id":"foo", "method": "aria2.getGlobalStat", "params":[]}' | cut -d "{" -f 3 | cut -d "," -f 3 | cut -d ":" -f 2 |tr -d '"')
+echo "Stopped Downloads : ${stopped}"
